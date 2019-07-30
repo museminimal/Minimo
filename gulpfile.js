@@ -1,7 +1,7 @@
 'use strict';
 /**
   * @gulpfile for {Anechka}
-  * @version 2.0
+  * @version 2.2 (30.07.2019)
   */
 
 const { gulp, src, dest, series, parallel, watch } = require('gulp');
@@ -32,7 +32,7 @@ function syncBrowsers () {
   });
 }
 
-function watchFiles (done) {
+function watchFiles () {
   syncBrowsers();
 
   /* WATCH HTML */
@@ -40,8 +40,7 @@ function watchFiles (done) {
 
   /* WATCH STYLES */
   watch('app/scss/**/*.scss').on('change', scssCompile);
-  watch('dist/css/**/*.css').on('change', browserSync.reload);
-  done();
+  watch('dist/css/main.css').on('change', browserSync.reload);
 }
 
 exports.watch = series(clean, scssCompile, watchFiles);

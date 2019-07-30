@@ -17,12 +17,14 @@ header {
 .nav {
   width: 650px;
   height: 100px;
+}
+.nav-list {
+  display: flex;
   list-style-type: none;
 }
 .nav-item {
-  display: inline;
   padding-left: 80px;
-  padding-top: 50px;
+  font-family: 'PlayfairDisplay-Italic';
 }
 .top-bg {
   width: 100%;
