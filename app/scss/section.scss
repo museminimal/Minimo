@@ -36,7 +36,7 @@ section {
   color: #B8B2A4;
 }
 
-.block2 {
+.block2, .block3 {
   width: 85%;
   height: 1310px;
   display: flex;
@@ -107,29 +107,4 @@ color: #626262;
    margin: 0 auto;
    border-bottom: 2px solid black;
    padding-top: 50px;
- }
-
- .block3 {
-   width: 75%;
-   height: 600px;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   margin: 0 auto;
- }
-
- .picbox {
-   width: 45%;
-   height: 50%;
- }
-
- .picbox img {
-   width: 100%;
-   height: 100%;
- }
-
- .textbox2 {
-   width: 45%;
-   height: 20%;
  }
