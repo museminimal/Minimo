@@ -1,7 +1,7 @@
 'use strict';
 /**
   * @gulpfile for {Anechka}
-  * @version 2.2 (30.07.2019)
+  * @version 2.3 (31.07.2019)
   */
 
 const { gulp, src, dest, series, parallel, watch } = require('gulp');
@@ -15,6 +15,12 @@ function scssCompile () {
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
         .pipe(dest('dist'))
+}
+
+function jsCompile () {
+  return src('app/js/main.js')
+        .pipe(concat('main.js'))
+	.pipe(dest('dist'))
 }
 
 function clean () {
@@ -41,6 +47,9 @@ function watchFiles () {
   /* WATCH STYLES */
   watch('app/scss/**/*.scss').on('change', scssCompile);
   watch('dist/css/main.css').on('change', browserSync.reload);
+
+  /* WATCH JS */
+  watch('app/js/**/*.js').on('change', jsCompile);
 }
 
-exports.watch = series(clean, scssCompile, watchFiles);
+exports.watch = series(clean, parallel(scssCompile, jsCompile), watchFiles);
