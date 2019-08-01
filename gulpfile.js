@@ -48,7 +48,7 @@ function watchFiles () {
   watch('dist/main.css').on('change', browserSync.reload);
 
   /* WATCH JS */
-  watch('dist/main.js').on('change', jsCompile);
+  watch('app/js/main.js').on('change', jsCompile);
 }
 
 exports.watch = series(clean, parallel(scssCompile, jsCompile), parallel(syncBrowsers, watchFiles));
