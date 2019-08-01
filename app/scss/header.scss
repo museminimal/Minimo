@@ -1,5 +1,5 @@
 header {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   height: 800px;
 }
@@ -12,20 +12,39 @@ header {
 .logo {
   width: 250px;
   height: 100px;
+  font-family: 'Inconsolata-Regular';
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: left;
+  padding-top: 40px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav {
   width: 650px;
   height: 100px;
 }
+
 .nav-list {
   display: flex;
   list-style-type: none;
 }
 .nav-item {
   padding-left: 80px;
-  font-family: 'PlayfairDisplay-Italic';
+  padding-top: 50px;
+  font-family: 'PlayfairDisplay-Regular';
+  font-size: 18px;
 }
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .top-bg {
   width: 100%;
   height: 670px;
