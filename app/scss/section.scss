@@ -36,7 +36,7 @@ section {
   color: #B8B2A4;
 }
 
-.block2,  .block3  {
+.block2 {
   width: 85%;
   height: 1310px;
   display: flex;
@@ -52,7 +52,7 @@ section {
   padding-top: 100px;
 }
 
-.imagebox img, .imagebox2 img {
+.imagebox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -97,10 +97,15 @@ color: #626262;
   padding-top: 80px;
 }
  .form-box input {
+   width: 100%;
+   height: 50px;
    padding-top: 15px;
    outline: 0;
    border: none;
    background: transparent;
+   font-family: 'PlayfairDisplay-Regular';
+   font-size: 15px;
+   color: #626262;
  }
 
  .form {
@@ -109,4 +114,26 @@ color: #626262;
    margin: 0 auto;
    border-bottom: 2px solid black;
    padding-top: 50px;
+ }
+
+ .block3 {
+   width: 85%;
+   height: 500px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 0 auto;
+ }
+
+ .imagebox2 {
+   width: 45%;
+   height: 100%;
+   padding-top: 100px;
+ }
+
+ .imagebox2 img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
  }
