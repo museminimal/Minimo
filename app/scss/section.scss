@@ -4,6 +4,12 @@ section {
   margin: 0 auto;
 }
 
+.2ndsection {
+  width: 90%;
+  height: 1500px;
+  margin: 0 auto;
+}
+
 .block1 {
   width: 80%;
   height: 400px;
@@ -38,7 +44,7 @@ section {
 
 .block2 {
   width: 85%;
-  height: 1310px;
+  height: 1350px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -67,7 +73,7 @@ section {
   text-decoration: none;
   color: #B8B2A4;
 }
-.block2 .title-and-comment {
+.block2 .title-and-comment, .block4 .title-and-comment {
   font-family: 'Ubuntu-Light';
   font-size: 15px;
   color: #B8B2A4;
@@ -114,11 +120,30 @@ color: #626262;
    margin: 0 auto;
    border-bottom: 2px solid black;
    padding-top: 50px;
+   padding-bottom: 10px;
+   position: relative;
+ }
+
+ .enter-img button {
+ margin: 0;
+ padding: 0;
+ font-size: 0;
+ line-height: 0;
+ background: url('../assets/img/button.png') center/cover no-repeat;
+ width: 20px;
+ height: 10%;
+ border: 0;
+ outline: 0;
+ position: absolute;
+ bottom: 10%;
+ right: 0;
+ background-size: 80%;
+
  }
 
  .block3 {
    width: 85%;
-   height: 500px;
+   height: 600px;
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
@@ -134,6 +159,41 @@ color: #626262;
 
  .imagebox2 img {
    width: 100%;
-   height: 100%;
+   height: 500px;
    object-fit: cover;
  }
+
+ .block4 {
+   width: 85%;
+   height: 300px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 0 auto;
+   padding-top: 20px;
+ }
+
+ .button-block {
+   width: 100%;
+   height: 400px;
+ }
+
+ .but {
+   width: 500px;
+   height: 300px;
+   margin: 0 auto;
+   position: relative;
+ }
+
+ .but button {
+  padding: 20px 40px;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  font-family: 'PlayfairDisplay-Regular';
+  font-size: 20px;
+  color: #626262;
+  background-color: inherit;
+  border: 1px solid black;
+}
