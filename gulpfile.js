@@ -4,7 +4,7 @@
   * @version 2.5 (31.07.2019)
   */
 
-const { gulp, src, dest, series, parallel, watch } = require('gulp');
+const { watch, src, dest, series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
@@ -39,6 +39,7 @@ function syncBrowsers () {
 }
 
 function watchFiles () {
+  syncBrowsers();
 
   /* WATCH HTML */
   watch('index.html').on('change', browserSync.reload);
@@ -48,7 +49,7 @@ function watchFiles () {
   watch('dist/main.css').on('change', browserSync.reload);
 
   /* WATCH JS */
-  watch('dist/main.js').on('change', jsCompile);
+  watch('app/js/main.js').on('change', jsCompile);
 }
 
-exports.watch = series(clean, parallel(scssCompile, jsCompile), parallel(syncBrowsers, watchFiles));
+exports.watch = series(clean, parallel(scssCompile, jsCompile), watchFiles);
